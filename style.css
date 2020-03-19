@@ -78,9 +78,6 @@ nav {
 .menu__main {
   transition: transform 0.3s 0.1s ease-in-out;
 }
-/* .hamburger--active {
-    transform: translateX(250px);
-  } */
 .hamburger__box {
   width: 35px;
   height: 24px;
@@ -192,7 +189,7 @@ nav {
     color: var(--primary);
   }
   /* trick aby po hoverze na navigacji wyswietlalo sie dropdown */
-  .dropdown:hover + .menu__sub,
+  .dropdown--desktop:hover + .menu__sub,
   .menu__sub:hover {
     display: grid;
   }
