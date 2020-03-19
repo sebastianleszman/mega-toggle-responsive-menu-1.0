@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+:root {
+  --primary: #f59921;
+  --white-trans: rgba(255, 255, 255, 0.5);
+  --white: #fff;
+  --light: #f4f4f4;
+  --silver: #c0c0c0;
+  --black: #000;
+  --dark: #333;
+  --gray: #707070;
+  --test: pink;
+  --test2: green;
+}
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  background-color: var(--white);
+  font-family: "Roboto", sans-serif;
+}
+button {
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: var(--black);
+  cursor: pointer;
+}
+/* utilities */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.img--contain {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* mobile */
+/* nav  */
+nav {
+  width: 100%;
+}
+.container {
+  width: 100%;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.menu__desktop {
+  display: none;
+}
+.top__bar {
+  display: flex; /* to align verticaly logo and hamburger */
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+.hamburger {
+  padding: 10px;
+  display: inline-block;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  outline: none; /* outline is set to none !!!!! */
+}
+.hamburger,
+.menu__main {
+  transition: transform 0.3s 0.1s ease-in-out;
+}
+/* .hamburger--active {
+    transform: translateX(250px);
+  } */
+.hamburger__box {
+  width: 35px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+.hamburger__inner {
+  width: 100%;
+  height: 3px;
+  background-color: var(--black);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.1s 0.2s ease-in-out;
+}
+.hamburger__inner::before,
+.hamburger__inner::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: var(--black);
+  position: absolute;
+  left: 0;
+  transition: transform 0.2s 0.2s ease-in-out;
+}
+.hamburger__inner::before {
+  top: -10px;
+}
+.hamburger__inner::after {
+  top: 10px;
+}
+.hamburger--active .hamburger__inner {
+  background-color: transparent;
+}
+.hamburger--active .hamburger__inner::before {
+  transform: translateY(10px) rotate(45deg);
+}
+.hamburger--active .hamburger__inner::after {
+  transform: translateY(-10px) rotate(-45deg);
+}
+/* seting logo height */
+.logo {
+  display: inline-block;
+  width: 40%;
+  height: 46;
+}
+.menu__main {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--white);
+  position: absolute;
+  top: 107.7px; /* height + padding of top__bar */
+  left: 0;
+  transform: translateX(-100vw);
+  font-size: 18px;
+  display: block;
+}
+.menu__main--active {
+  transform: translateX(0px);
+}
+.menu__main > a {
+  display: block;
+  padding: 30px 50px;
+  outline: none; /* outline is set to none !!!!! */
+}
+.menu__sub {
+  display: none;
+}
+.group--label {
+  background-color: var(--dark);
+  color: var(--white);
+}
+.menu__sub > a {
+  display: block;
+  padding: 30px 50px;
+  outline: none;
+}
+.dropdown--active {
+  color: var(--primary);
+}
+@media (min-width: 960px) {
+  /* nav  */
+  nav {
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+  .menu__main__wrapper {
+    display: none;
+  }
+  .menu__desktop {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    background-color: var(--white);
+    position: relative; /* bo jest parentem menu-sub-4, ktore jest pozycjonowane absolunie */
+    text-align: center;
+  }
+  /* targetuje a aby elementach (a) nizej nie mialy tych wlasnosci */
+  .menu__desktop > a {
+    font-size: 20px;
+    padding: 20px;
+  }
+  .menu__desktop > a:hover {
+    color: var(--primary);
+  }
+  /* trick aby po hoverze na navigacji wyswietlalo sie dropdown */
+  .dropdown:hover + .menu__sub,
+  .menu__sub:hover {
+    display: grid;
+  }
+  .menu__sub {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 64px;
+
+    padding: 30px;
+    background-color: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  /* .menu__sub__category {
+      width: 100%;
+    } */
+  .menu__sub__category__name {
+    text-align: left;
+    font-size: 16px;
+    padding: 10px 0 20px 0;
+  }
+  .menu__sub__item__container {
+    text-align: left;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .menu__sub__item__container > a {
+    font-size: 16px;
+    width: 80%;
+    border-bottom: 1px solid var(--silver);
+    padding: 5px;
+  }
+  .menu__sub__item__container a:hover {
+    color: var(--primary);
+  }
+  .unActive {
+    display: none;
+  }
+  /* modifiers */
+  .mega--4 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+}

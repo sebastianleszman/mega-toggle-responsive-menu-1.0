@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mega-toggle-responsive-menu 1.0</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav>
+      <!-- grid po to aby dolozyc logo -->
+      <div class="container grid">
+        <!-- for desktop -->
+        <div class="menu__desktop grid">
+          <a href="#">Strona Główna</a>
+          <a href="#" class="dropdown">Produkty</a>
+          <div class="menu__sub mega--4 grid unActive">
+            <div class="menu__sub__category">
+              <h4 class="menu__sub__category__name">
+                MEBLE DO BIURA
+              </h4>
+              <div class="menu__sub__item__container grid">
+                <a href="#">Meble Biurowe</a>
+                <a href="#">Meble Gabinetowe</a>
+                <a href="#">Meble Konferencyjne</a>
+              </div>
+            </div>
+            <div class="menu__sub__category ">
+              <h4 class="menu__sub__category__name">
+                MEBLE METALOWE
+              </h4>
+              <div class="menu__sub__item__container grid">
+                <a href="#">Szafy Ubraniowe</a>
+                <a href="#">Regały Warsztatowe</a>
+                <a href="#">Szafki zamykane</a>
+              </div>
+            </div>
+            <div class="menu__sub__category">
+              <h4 class="menu__sub__category__name">
+                KRZESŁA I FOTELE
+              </h4>
+              <div class="menu__sub__item__container grid">
+                <a href="#">Krzesła i Fotele Obrotowe</a>
+                <a href="#">Krzesła i Fotele Konferencyjne</a>
+                <a href="#">Meble Konferencyjne</a>
+              </div>
+            </div>
+            <div class="menu__sub__category">
+              <h4 class="menu__sub__category__name">
+                SOFY I NAROŻNIKI
+              </h4>
+              <div class="menu__sub__item__container grid">
+                <a href="#">Sofy</a>
+                <a href="#">Kanapy</a>
+                <a href="#">Narożniki</a>
+                <a href="#">Fotele</a>
+              </div>
+            </div>
+            <div class="menu__sub__category">
+              <h4 class="menu__sub__category__name">
+                MEBLE SZKOLNE
+              </h4>
+              <div class="menu__sub__item__container grid">
+                <a href="#">Krzesła Szkolne</a>
+                <a href="#">Ławki i Stoliki</a>
+                <a href="#">Biurka dla Nauczycieli</a>
+                <a href="#">Szafki Szkolne</a>
+                <a href="#">Szafki i Regały</a>
+              </div>
+            </div>
+            <div class="menu__sub__category">
+              <h4 class="menu__sub__category__name">LADY</h4>
+              <div class="menu__sub__item__container grid">
+                <a href="#">Lady Recepcyjne</a>
+              </div>
+            </div>
+            <div class="menu__sub__category">
+              <h4 class="menu__sub__category__name">
+                MEBLE KUCHENNE
+              </h4>
+              <div class="menu__sub__item__container grid">
+                <a href="#">Zestawy Aneksów</a>
+                <a href="#">Szafki Wiszące</a>
+                <a href="#">Szafki stojące</a>
+                <a href="#">Blaty</a>
+                <a href="#">Stoły</a>
+              </div>
+            </div>
+          </div>
+          <a href="#">O Firmie</a>
+          <a href="#">Kontakt</a>
+        </div>
+        <div class="menu__main__wrapper">
+          <!-- for mobile -->
+          <div class="top__bar">
+            <button class="hamburger">
+              <span class="hamburger__box">
+                <span class="hamburger__inner"></span>
+              </span>
+            </button>
+            <div class="logo">
+              <img src="./assets/logo.jpg" alt="Logo" class="img--contain" />
+            </div>
+          </div>
+          <div class="menu__main grid">
+            <a href="#">Strona Główna</a>
+            <a href="#" class="dropdown">Produkty</a>
+            <div class="menu__sub">
+              <a href="#!" class="group--label dropdown">Meble Do Biura</a>
+              <div class="menu__sub">
+                <a href="#">Meble Biurowe</a>
+                <a href="#">Meble Gabinetowe</a>
+                <a href="#">Meble Konferenczjne</a>
+              </div>
+              <a href="#!" class="group--label dropdown">Meble Metalowe</a>
+              <div class="menu__sub">
+                <a href="#">Szafy Ubraniowe</a>
+                <a href="#">Regały Warsztatowe</a>
+                <a href="#">Szafki Zamykane</a>
+              </div>
+              <a href="#!" class="group--label dropdown">Krzesła i Fotele</a>
+              <div class="menu__sub">
+                <a href="#">Krzesła i Fotele Obrotowe</a>
+                <a href="#">Krzesła i Fotele Konferencyjne</a>
+                <a href="#">Meble Konferencyjne</a>
+              </div>
+              <a href="#!" class="group--label dropdown">Sofy i Narożniki</a>
+              <div class="menu__sub">
+                <a href="#">Sofy</a>
+                <a href="#">Kanapy</a>
+                <a href="#">Narożniki</a>
+                <a href="#">Fotele</a>
+              </div>
+              <a href="#!" class="group--label dropdown">Meble Szkolne</a>
+              <div class="menu__sub">
+                <a href="#">Krzesła Szkolne</a>
+                <a href="#">Ławki i Stoliki</a>
+                <a href="#">Biurka dla Nauczycieli</a>
+                <a href="#">Szafki Szkolne</a>
+                <a href="#">Szafki i Regały</a>
+              </div>
+              <a href="#!" class="group--label dropdown">Lady</a>
+              <div class="menu__sub">
+                <a href="#">Lady Recepcyjne</a>
+              </div>
+              <a href="#!" class="group--label dropdown">Meble Kuchenne</a>
+              <div class="menu__sub">
+                <a href="#">Zestawy Aneksów</a>
+                <a href="#">Szafki Wiszące</a>
+                <a href="#">Szafki stojące</a>
+                <a href="#">Blaty</a>
+                <a href="#">Stoły</a>
+              </div>
+            </div>
+            <a href="#">O Firmie</a>
+            <a href="#">Kontakt</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <script src="./app.js"></script>
+  </body>
+</html>
